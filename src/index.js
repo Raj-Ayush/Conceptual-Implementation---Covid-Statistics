@@ -44,7 +44,7 @@ app.get('/totalActive', async (req, res) =>{
         },
     ]);
     const totalInfected = secondOne[0];
-    res.send({ data : { total : totalInfected.infected - totalRecovered.recovered}});
+    res.send({ data : { _id : totalInfected._id, active: totalInfected.infected - totalRecovered.recovered}});
 });
 
 
